@@ -106,6 +106,9 @@ margin-right: 50px;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .list-nav .current {
     color: var(--hover-color);
@@ -135,6 +138,9 @@ margin-right: 50px;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-icon {
@@ -145,11 +151,8 @@ margin-right: 50px;
 .list-nav a:hover,
 .address-header a:hover,
 .list-nav a:focus,
-.address-header a:focus
-.list-nav a:active {
+.address-header a:focus {
     color: #2196F3;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* hero */
@@ -375,14 +378,15 @@ width: 44px;
 height: 44px;
 border-radius: 50%;
 color: #AFB1B8;
+
+transition-duration: 250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .links-item :hover,
 .links-item :focus {
     background-color: var(--hover-color);
     color: var(--background-color-white);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .links-item:not(:last-child){
@@ -415,6 +419,9 @@ margin-right: 30px;
     border: 1px solid #AFB1B8;
     border-radius: 4px;
     color: #AFB1B8;
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -422,8 +429,6 @@ margin-right: 30px;
 .client-item a:focus {
     border-color: var(--hover-color);
     color:  var(--hover-color);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -528,19 +533,21 @@ button {
     letter-spacing: 0.03em;
     background-color: #F5F4FA;
     border-radius: 4px;
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio button:hover,
 .portfolio button:focus {
     color: var(--background-color-white);
     background-color: var(--hover-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* Carts */
 .portfolio-link {
     display: block;
-    position: relative;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-preview {
     display: flex;
@@ -561,16 +568,11 @@ button {
 .portfolio-link:hover,
 .portfolio-link:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-link:hover .portfolio-above,
-.portfolio-link:focus .portfolio-above {
-    opacity: 1;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    
+.portfolio-img-text:hover .portfolio-above,
+.portfolio-img-text:focus .portfolio-above {
+    transform: translateY(-0px);
 }
 
 .portfolio-content {
@@ -606,12 +608,16 @@ padding: 20px 24px;
     line-height: 1.87;
     letter-spacing: 0.03em;
 }
-
-a .portfolio-above {
+    a .portfolio-img-text {
+    position: relative;
+    overflow: hidden;
+    min-width: 370px;
+    height: 294px;
+}
+.portfolio-img-text .portfolio-above {
     position: absolute;
     z-index: 1;
     top: 0;
-    opacity: 0;
 
     width: 370px;
     height: 294px;
@@ -624,4 +630,8 @@ a .portfolio-above {
     letter-spacing: 0.03em;
     color: var(--background-color-white);
     background-color: rgba(33, 150, 243, 0.9);
-    }
+
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(300px);    
+}
