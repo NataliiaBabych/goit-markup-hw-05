@@ -107,6 +107,8 @@ margin-right: 50px;
     line-height: 1.14;
     letter-spacing: 0.02em;
 
+    
+    transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -139,6 +141,7 @@ margin-right: 50px;
     line-height: 1.14;
     letter-spacing: 0.02em;
 
+    transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -152,7 +155,7 @@ margin-right: 50px;
 .address-header a:hover,
 .list-nav a:focus,
 .address-header a:focus {
-    color: #2196F3;
+    color:var(--hover-color);
 }
 
 /* hero */
@@ -379,8 +382,8 @@ height: 44px;
 border-radius: 50%;
 color: #AFB1B8;
 
-transition-duration: 250ms;
-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .links-item :hover,
@@ -420,8 +423,8 @@ margin-right: 30px;
     border-radius: 4px;
     color: #AFB1B8;
 
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: bborder-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -503,6 +506,55 @@ footer>div {
     fill: var(--background-color-white);
     margin: 12px;
 }
+/* Модальное окно */
+ .backdrop {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background-color: rgba(0, 0, 0, 0.2);
+ }
+ .backdrop.is-hidden {
+     opacity: 0;
+     pointer-events: none;
+
+ }
+ .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+     min-width: 528px;
+     min-height: 581px;
+     background-color: var(--background-color-white);
+ }
+ .btn {
+    position: relative;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    padding: 0px;
+    margin-top: 8px;
+    margin-right: 8px;
+    margin-bottom: auto;
+    margin-left: 490px;
+ }
+  .btn::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: '';
+    background-image: url(../images/close.svg);
+    width: 18px;
+    height: 18px;
+  }
+
+
+
 /* portfolio list */
 .portfolio {
     padding-top: 94px;
@@ -534,8 +586,9 @@ button {
     background-color: #F5F4FA;
     border-radius: 4px;
 
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio button:hover,
 .portfolio button:focus {
@@ -546,8 +599,8 @@ button {
 /* Carts */
 .portfolio-link {
     display: block;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
 }
 .portfolio-preview {
     display: flex;
@@ -572,7 +625,7 @@ button {
 
 .portfolio-img-text:hover .portfolio-above,
 .portfolio-img-text:focus .portfolio-above {
-    transform: translateY(-0px);
+    transform: translateY(0);
 }
 
 .portfolio-content {
@@ -631,7 +684,8 @@ padding: 20px 24px;
     color: var(--background-color-white);
     background-color: rgba(33, 150, 243, 0.9);
 
+    transition-property: transform;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transform: translateY(300px);    
+    transform: translateY(100%);    
 }
