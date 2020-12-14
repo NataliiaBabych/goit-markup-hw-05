@@ -423,7 +423,7 @@ margin-right: 30px;
     border-radius: 4px;
     color: #AFB1B8;
 
-    transition: bborder-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -623,8 +623,8 @@ button {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.portfolio-img-text:hover .portfolio-above,
-.portfolio-img-text:focus .portfolio-above {
+.portfolio-link:hover .portfolio-above,
+.portfolio-link:focus .portfolio-above {
     transform: translateY(0);
 }
 
